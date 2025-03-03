@@ -8,7 +8,7 @@ LLaMA 3.2 1B is a model trained by Meta on a broad dataset. We will be using it 
 
 
 
-## General Project Setup 
+### General Project Setup 
 
 I am using an M1 MacBook Air (2020, 8GB), and these instructions are based on that. For other operating systems, the steps should be somewhat similar, but please verify accordingly.
 
@@ -17,6 +17,7 @@ I am using an M1 MacBook Air (2020, 8GB), and these instructions are based on th
 brew install huggingface-cli
 huggingface-cli login
 ```
+
 - use a python virtual environment 
 ```zsh
 python3 -m venv .venv 
@@ -34,7 +35,7 @@ pip install -r requirements.txt
 
 
 
-## Download and run the Llama model 
+### Download and run the Llama model 
 
 There are two broad ways to download and run a model :  
 
@@ -110,7 +111,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 device = torch.device("mps")
 
 model_path = "Llama-3.2-1B"
-model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16).to(device)
+model = AutoModelForCausalLM.from_pretrained(
+    model_path, 
+    torch_dtype=torch.bfloat16
+    ).to(device)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 # Encode input
@@ -131,11 +135,15 @@ print("Model Response:", response)
 
 
 
-## Key Takeaways - 
+### Key Takeaways - 
 
 - Base models like LLaMA 3.2 1B are pretrained on general data and need fine-tuning for specific tasks.
+
 - Not all LLMs are derived from a base model, some are trained entirely from scratch, though this is rare due to cost.
+
 - Using pipeline() → Minimal Setup and Faster Execution
+
 - Manually Downloading & Running Weights → More Control, may be a little slower 
+
 - MPS is slow for this use case, possibly because Transformers and Torch are not as well-optimized for Apple Metal as they are for NVIDIA CUDA. Additionally, MPS was observed to significantly increase memory pressure, while the CPU handled it more efficiently.
 
