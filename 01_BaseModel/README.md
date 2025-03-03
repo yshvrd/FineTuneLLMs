@@ -33,6 +33,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+requirements.txt
+```
+torch
+torchvision
+torchaudio
+transformers
+accelerate
+```
+
 
 
 ### Download and run the Llama model 
@@ -134,6 +143,18 @@ print("Model Response:", response)
 (average output time - 6 seconds on CPU and 10 seconds on GPU)
 
 
+The outputs from this inference process(running the code) may be vague and inconsistent, which is expected given the model's size.
+
+
+![Project Structure](../.assets/01/project_struct.png)
+
+
+![Output-1](../.assets/01/Output_1.png)
+
+
+![Output-2](../.assets/01/Output_2.png)
+
+
 
 ### Key Takeaways - 
 
@@ -146,4 +167,5 @@ print("Model Response:", response)
 - Manually Downloading & Running Weights → More Control, may be a little slower 
 
 - MPS is slow for this use case, possibly because Transformers and Torch are not as well-optimized for Apple Metal as they are for NVIDIA CUDA. Additionally, MPS was observed to significantly increase memory pressure, while the CPU handled it more efficiently.
+![Usage Metrics](../.assets/01/usage.png)
 
