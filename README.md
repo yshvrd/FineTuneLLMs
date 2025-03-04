@@ -4,9 +4,9 @@ This repository is a collection of everything I’ve learned while exploring LLM
 
 ### About This Repository
 
-1. **platform-Specific Notes:** The techniques, code, and setups in this repo are based on my personal machine — a MacBook Air M1 (2020, 8GB RAM, no dedicated GPU). Most things should work across platforms, but some optimizations or configurations might be MacOS-specific.
+1. **platform-Specific Notes:** The techniques, code, and setups in this repo are based on my personal machine — a MacBook Air M1 (2020, 8GB RAM, no dedicated GPU).
 
-2. **General Compatibility:** Most methods should work across different platforms (Windows, Linux, macOS), but certain dependencies or performance factors may vary.
+2. **General Compatibility:** Most methods should work across different platforms (Windows, Linux, macOS), but certain dependencies or performance factors may vary, configurations might be Mac specific.
 
 3. **What’s Covered:**
 - Step-by-step fine-tuning of LLaMA 3.2 1B for domain-specific applications
@@ -16,7 +16,7 @@ This repository is a collection of everything I’ve learned while exploring LLM
 
 4. This repository is a work in progress, documenting my personal experiences and experiments with LLM fine-tuning. Everything here is anecdotal, based on what I’ve tried and learned firsthand.
 
-5. Each folder contains a README.md with a general introduction to the topic and an InDepth.md with detailed explanations. Some files may be nested within subfolders for better organization, and everything is named and structured logically.
+5. Each folder contains a README.md with a general introduction to the topic and an _InDepth.md with detailed explanations. Some files may be nested within subfolders for better organization, and everything is named and structured logically.
 
 
 ### Repository Structure 
@@ -36,5 +36,11 @@ This repository is a collection of everything I’ve learned while exploring LLM
 
 - [Intro to Models](./01_BaseModel/README.md#base-model), [Models InDepth](./01_BaseModel/Models_InDepth.md), [Llama-3.2-1B InDepth](./01_BaseModel/Llama-3.2-1B_InDepth.md)
 
-- [Intro to Optimizations](), [Intro to Quantization](), [Quantization InDepth]()
+- [Intro to Optimizations]()
+
+- [Quantization InDepth]()
+
+- [Efficient Model Formats](), [Distilled Models]()
+
+- [LoRA In_Depth](), [CLoRA InDepth]()
 
