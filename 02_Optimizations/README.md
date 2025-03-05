@@ -26,4 +26,33 @@ Before fine-tuning an LLM, several optimizations can be applied to improve effic
 These are the **major and widely used** LLM optimization methods. Many others exist, but these are the most effective for improving efficiency, reducing memory usage, and optimizing training and inference.
 
 
+## Quantization 
+
+Quantization is the process of reducing the precision of numerical values in a model to make it more efficient. In deep learning, it typically refers to reducing the bit-width of floating-point numbers (e.g., 32-bit floating point, FP32) to lower-bit representations like 16-bit floating point (FP16), 8-bit integer (INT8), or even 4-bit integer (INT4).
+
+In simple words, it is a way to reduce model and computational complexity by reducing the weights from a higher memory format to a lower memory format.
+
+### Why is Quantization Used?
+
+1. Reduces Model Size – Lower-bit representations take up less memory, making models easier to store and deploy on edge devices.
+
+2. Improves Inference Speed – Operations on lower-bit values require fewer computational resources, leading to faster inference.
+
+3. Lowers Power and Memory Consumption – Useful for mobile and embedded devices where memory and power efficiency is crucial.
+
+### Types of Quantization
+
+1. Post-Training Quantization (PTQ) – The model is trained in full precision (FP32) and then converted to lower precision after training.
+
+2. Quantization-Aware Training (QAT) – The model is trained while simulating lower-bit computations to adapt to the reduced precision.
+
+
+
+## LoRA (Low Rank Adaptation)
+
+LoRA (Low-Rank Adaptation) is a technique used to fine-tune large language models (LLMs) efficiently by freezing most of the model's weights and only training a small set of additional parameters. Fine-tuning a large model like LLaMA 3.2 1B directly is expensive in terms of memory, computation, and storage. LoRA solves this by only updating a small, low-rank matrix instead of the entire weight matrix.
+
+
+In simpler terms, LoRA only updates the required weights in a matrix. Instead of modifying the huge weight matrices, it adds small matrices that learn the changes. This reduces memory usage and speeds up training while still adapting the model to new tasks.
+
 
