@@ -16,7 +16,7 @@ This repository is a collection of everything I’ve learned while exploring LLM
 
 4. This repository is a work in progress, documenting my personal experiences and experiments with LLM fine-tuning. Everything here is anecdotal, based on what I’ve tried and learned firsthand.
 
-5. Each folder contains a README.md with a general introduction to the topic and an _InDepth.md with detailed explanations. Some files may be nested within subfolders for better organization, and everything is named and structured logically.
+5. Each folder contains a README.md with a general introduction to the topic and an _Explained.md with detailed explanations. Some files may be nested within subfolders for better organization, and everything is named and structured logically.
 
 
 ### Repository Structure 
@@ -27,7 +27,13 @@ This repository is a collection of everything I’ve learned while exploring LLM
 
 **02_Optimizations** - Parameter Efficient Fine-Tuning (LoRA, QLoRA) and Quantization Techniques
 
+**03_DatasetPreparation** - How to prepare and tokenize a dataset for fine-tuning.
 
+**04_Training** - How to efficient train on limited compute systems.
+
+**05_Testing** - Testing the base model and fine-tuned model on various tasks and parameters.
+
+**06_Deploy** - How to deploy a model using Streamlit and FastAPI.
 
 
 ### Topic Specific Index 
@@ -43,4 +49,10 @@ This repository is a collection of everything I’ve learned while exploring LLM
 - [Efficient Model Formats](), [Distilled Models]()
 
 - [LoRA In_Depth](), [CLoRA InDepth]()
+
+
+
+### Post-Project Reflections
+
+- 
 
